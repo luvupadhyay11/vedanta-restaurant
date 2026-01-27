@@ -17,10 +17,6 @@ export default function Navbar({ cartCount = 0, openCart, isHomePage = false }) 
     }
   }, [isHomePage])
 
-  const navigateTo = (path) => {
-    window.location.href = path
-  }
-
   return (
     <>
       <nav className={`navbar ${!isHomePage ? 'non-home' : scrolled ? 'scrolled' : ''}`}>
@@ -33,18 +29,18 @@ export default function Navbar({ cartCount = 0, openCart, isHomePage = false }) 
 
           {/* Navigation Links */}
           <div className="nav-links">
-            <button className="nav-link" onClick={() => navigateTo('/')}>
+            <Link to="/" className="nav-link">
               Home
-            </button>
-            <button className="nav-link" onClick={() => navigateTo('/about')}>
+            </Link>
+            <Link to="/about" className="nav-link">
               About
-            </button>
-            <button className="nav-link" onClick={() => navigateTo('/menu')}>
+            </Link>
+            <Link to="/menu">
               Menu
-            </button>
-            <button className="nav-link" onClick={() => navigateTo('/contact')}>
+            </Link>
+            <Link to="/contact">
               Contact
-            </button>
+            </Link>
           </div>
 
           {/* Action Buttons */}
@@ -58,14 +54,14 @@ export default function Navbar({ cartCount = 0, openCart, isHomePage = false }) 
             </button>
 
             {/* Login Button */}
-            <button className="login-btn" onClick={() => navigateTo('/AdminLogin')}>
+            <Link to="/adminlogin" className="login-btn">
               Login
-            </button>
+            </Link>
 
-            {/* Order Now Button */}
-            <button className="order-btn" onClick={() => navigateTo('/menu')}>
+            {/* Order Now Link */}
+            <Link to="/menu" className="order-btn">
               Order Now
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
