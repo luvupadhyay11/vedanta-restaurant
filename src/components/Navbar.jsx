@@ -35,10 +35,10 @@ export default function Navbar({ cartCount = 0, openCart, isHomePage = false }) 
             <Link to="/about" className="nav-link">
               About
             </Link>
-            <Link to="/menu">
+            <Link to="/menu" className="nav-link">
               Menu
             </Link>
-            <Link to="/contact">
+            <Link to="/contact" className="nav-link">
               Contact
             </Link>
           </div>
@@ -137,6 +137,7 @@ export default function Navbar({ cartCount = 0, openCart, isHomePage = false }) 
           cursor: pointer;
           padding: 8px 0;
           position: relative;
+          text-decoration: none;
           transition: all 0.3s ease;
         }
 
@@ -214,6 +215,7 @@ export default function Navbar({ cartCount = 0, openCart, isHomePage = false }) 
           font-weight: 600;
           border-radius: 24px;
           cursor: pointer;
+          text-decoration: none;
           transition: all 0.3s ease;
         }
 
@@ -233,6 +235,7 @@ export default function Navbar({ cartCount = 0, openCart, isHomePage = false }) 
           font-weight: 700;
           border-radius: 24px;
           cursor: pointer;
+          text-decoration: none;
           transition: all 0.3s ease;
           box-shadow: 0 4px 15px rgba(255, 183, 3, 0.4);
         }
